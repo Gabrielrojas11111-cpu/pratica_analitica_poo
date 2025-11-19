@@ -3,6 +3,8 @@ from Triangulo import Triangulo
 from Cuadradro import Cuadradro
 from Rectangulo import Rectangulo
 from Circulo import Circulo
+from Cilindro import Cilindro
+from Paralelograma import Paralelograma 
 
 while True:
     print("---------- Menu de Figuras Geometricas-----------")
@@ -10,11 +12,12 @@ while True:
     print("2.Cuadradro")
     print("3.Rectangulo")
     print("4.Circulo")
-    print("5.salir")
+    print("5.Cilindro")
+    print("6,Paralelograma")
+    print("7.salir")
 
     opcion = int(input("Seleccione una opcion: "))
 
- 
     if opcion == 1:
         base = float(input("Ingrese la base del triangulo: "))
         altura = float(input("Ingrese la altura del triangulo: "))
@@ -38,8 +41,24 @@ while True:
         print("El area del circulo es:", cr.area())
 
 
-    
     elif opcion == 5:
+        radio = float(input("Digite el radio del Cilindro: "))
+        altura = float(input("Digite la altura del Cilindro: "))
+
+        ci = Cilindro("Cilindro")
+        ci.radio = radio
+        ci.altura = altura
+        print("El area del Cilindro es:",opcion, "es",ci.area())
+
+    elif opcion == 6:
+        base = float(input("Digite la base del Paralelograma: "))
+        altura = float(input("Digite la altura del Paralelogrma: "))
+        pr= Paralelograma("Paralelograma")
+        pr.base = base
+        pr.altura = altura
+        print("El area del Paralelograma es:",opcion, "es",pr.area())
+
+    elif opcion == 7:
         print("Saliendo del programa...")
         break
 
