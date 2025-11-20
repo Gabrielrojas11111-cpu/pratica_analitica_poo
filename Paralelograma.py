@@ -7,7 +7,7 @@ class Paralelograma(Figurasgeometricas):
 
     @property
     def base(self) -> float:
-      return self.base
+      return self._base
     
     @base.setter
     def base(self, base: float):

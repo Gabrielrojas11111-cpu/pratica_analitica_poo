@@ -5,6 +5,9 @@ from Rectangulo import Rectangulo
 from Circulo import Circulo
 from Cilindro import Cilindro
 from Paralelograma import Paralelograma 
+from Trapecio import Trapecio
+from Esfera import Esfera
+
 
 while True:
     print("---------- Menu de Figuras Geometricas-----------")
@@ -14,7 +17,9 @@ while True:
     print("4.Circulo")
     print("5.Cilindro")
     print("6,Paralelograma")
-    print("7.salir")
+    print("7.Trapecio")
+    print("8.Esfera")
+    print("9.salir")
 
     opcion = int(input("Seleccione una opcion: "))
 
@@ -58,7 +63,20 @@ while True:
         pr.altura = altura
         print("El area del Paralelograma es:",opcion, "es",pr.area())
 
+
     elif opcion == 7:
+         b_mayor = float(input("Ingrese la base mayor del Trapecio: "))
+         b_menor = float(input("Ingrese la base menor del Trapecio: "))
+         altura = float(input("Ingrese la altura del Trapecio: "))
+         figura = Trapecio(b_mayor, b_menor, altura)     
+         print("El área del Trapecio es:", figura.area())
+
+    elif opcion == 8:
+         radio = float(input("Ingrese el radio de la Esfera: "))
+         figura = Esfera(radio)
+         print("El área de la Esfera es:", figura.area())
+
+    elif opcion == 9:
         print("Saliendo del programa...")
         break
 
